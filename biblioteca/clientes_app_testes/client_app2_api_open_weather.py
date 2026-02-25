@@ -25,7 +25,7 @@ def get_temperatura(city):
 
 # Exemplo de uso
 if __name__ == "__main__":
-    cidade = "salvador" 
+    cidade = "Salvador, BR" 
     temperatura = get_temperatura(cidade)
     if temperatura:
         print(f"A temperatura em {cidade} é de {temperatura:.2f} graus Celsius.")

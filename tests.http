@@ -12,16 +12,29 @@ POST http://localhost:8000/autores/
 Content-Type: application/json
 
 {
-    "nome": "Clarice Lispector",
+    "nome": "Clarice Lispector"
 }
 
 ### Testando o PATCH
-PATCH http://localhost:8000/autores/1/
+PATCH http://localhost:8000/livros/1/
 Content-Type: application/json
 
 {
-    "data_nascimento": "9999-01-01"
+    "titulo": "Título 1 com 2 autores"
 }
+### Testando o PUT
+PUT http://localhost:8000/livros/1/
+Content-Type: application/json
+
+{
+    "titulo": "Título 1 com 1 autor",
+    "resumo": "resumo 1",
+    "data_pub": "2025-01-20",
+    "autores": [
+      1
+    ]
+}
+
 ### Testando API OpenWather
 @owkey = 000
 GET http://api.openweathermap.org/data/2.5/weather?q=Salvador,br&appid={{owkey}}

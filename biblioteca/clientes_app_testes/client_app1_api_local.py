@@ -5,12 +5,11 @@ import requests
 
 BASE_URL = "http://localhost:8000"
 
-def cadastrar_autor(nome, data_nasc):
+def cadastrar_autor(nome):
     url = f"{BASE_URL}/autores/"
     dados = {
-        "nome": nome,
-        "data_nascimento": data_nasc
-    }
+        "nome": nome
+     }
     
     response = requests.post(url, json=dados)
     
@@ -36,6 +35,6 @@ def listar_livros():
 # Executando o "App"
 if __name__ == "__main__":
     # 1. Tenta cadastrar um autor
-    cadastrar_autor("Jhon Newton", "1960-02-22")
+    cadastrar_autor("Jhon Newton")
     # 2. Lista os livros
     listar_livros()
